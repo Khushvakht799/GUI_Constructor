@@ -1,0 +1,23 @@
+{
+  "start_assistant": {
+    "name": "Запуск ассистента",
+    "description": "Запуск основного скрипта ассистента",
+    "command": "python main.py",
+    "category": "control",
+    "usage_count": 0
+  },
+  "monitor_resources": {
+    "name": "Мониторинг ресурсов",
+    "description": "Отслеживание использования CPU, RAM, GPU",
+    "command": "resource_monitor.py",
+    "category": "monitoring",
+    "usage_count": 0
+  },
+  "view_logs": {
+    "name": "Просмотр логов",
+    "description": "Реальный просмотр логов приложения",
+    "command": "log_viewer.py",
+    "category": "monitoring",
+    "usage_count": 0
+  }
+}

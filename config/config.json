@@ -1,0 +1,32 @@
+﻿{
+    "app": {
+        "name": "GUI Constructor",
+        "version": "1.0.0",
+        "author": "Khushvakht799",
+        "description": "Visual GUI constructor with AI assistance"
+    },
+    "gui": {
+        "default_width": 1200,
+        "default_height": 800,
+        "theme": "default",
+        "language": "ru"
+    },
+    "ai": {
+        "enabled": true,
+        "model": "default",
+        "max_tokens": 1000,
+        "temperature": 0.7
+    },
+    "paths": {
+        "projects": "projects",
+        "templates": "templates",
+        "exports": "exports",
+        "logs": "logs"
+    },
+    "features": {
+        "code_generation": true,
+        "ai_assistance": true,
+        "project_analysis": true,
+        "export_formats": ["python", "json"]
+    }
+}

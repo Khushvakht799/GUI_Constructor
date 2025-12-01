@@ -1,4 +1,4 @@
-import json
+﻿import json
 import os
 import re
 
@@ -13,7 +13,7 @@ class KnowledgeBase:
             with open(self.kb_path, "r", encoding="utf-8") as f:
                 self.data = json.load(f)
         else:
-            # создать пустой kb
+            # СЃРѕР·РґР°С‚СЊ РїСѓСЃС‚РѕР№ kb
             self.save()
 
     def save(self):
@@ -21,14 +21,14 @@ class KnowledgeBase:
             json.dump(self.data, f, indent=4, ensure_ascii=False)
 
     def find_fix(self, message):
-        """Ищет подходящую запись по тексту ошибки."""
+        """РС‰РµС‚ РїРѕРґС…РѕРґСЏС‰СѓСЋ Р·Р°РїРёСЃСЊ РїРѕ С‚РµРєСЃС‚Сѓ РѕС€РёР±РєРё."""
         for item in self.data.get("errors", []):
             if re.search(item["pattern"], message):
                 return item
         return None
 
     def register_error(self, pattern, description, fix):
-        """Добавляет новый шаблон ошибки."""
+        """Р”РѕР±Р°РІР»СЏРµС‚ РЅРѕРІС‹Р№ С€Р°Р±Р»РѕРЅ РѕС€РёР±РєРё."""
         self.data["errors"].append({
             "pattern": pattern,
             "description": description,
@@ -36,7 +36,8 @@ class KnowledgeBase:
         })
         self.save()
 
-# Быстрый метод для использования
+# Р‘С‹СЃС‚СЂС‹Р№ РјРµС‚РѕРґ РґР»СЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ
 def load_kb():
     kb_path = os.path.join("Gui", "knowledge.json")
     return KnowledgeBase(kb_path)
+

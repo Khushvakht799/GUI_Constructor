@@ -5,14 +5,14 @@ import os
 
 def load_kb():
     try:
-        with open("data/knowledge.json", "r", encoding="utf-8") as f:
+        with open('data/knowledge.json', 'r', encoding='utf-8') as f:
             return json.load(f)
     except:
         return {}
 
 def save_kb(data):
     try:
-        with open("data/knowledge.json", "w", encoding="utf-8") as f:
+        with open('data/knowledge.json', 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
         return True
     except:
@@ -49,15 +49,15 @@ class GUIManager:
         if self.root:
             messagebox.showinfo(title, message)
         else:
-            print(f"{title}: {message}")
+            print(f'{title}: {message}')
             
-    def ask_file(self, title="Выберите файл", filetypes=[("Все файлы", "*.*")]):
+    def ask_file(self, title='Выберите файл', filetypes=[('Все файлы', '*.*')]):
         if self.root:
             return filedialog.askopenfilename(title=title, filetypes=filetypes)
         return None
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     root = tk.Tk()
     manager = GUIManager(root)
-    print("GUIManager создан успешно")
+    print('GUIManager создан успешно')
     root.destroy()
