@@ -12,7 +12,9 @@ kb = load_kb()import json
 import subprocess
 import sys
 import threading
+from core.kb_manager import KnowledgeBase
 
+kb = KnowledgeBase()
 ROOT = Path(__file__).resolve().parents[1]
 ANALYZER = ROOT / 'core' / 'project_analyzer.py'
 ANALYZER_REPORT = ROOT / 'analyzer_report.json'
@@ -69,24 +71,35 @@ class KnowledgeBase:
         })
         self.save()
 
-
-# Глобальный объект БЗ
+# --- Глобальный объект БЗ ---
 kb = KnowledgeBase()
 
+# --- Сохранение KB на диск (если нужно вручную) ---
+def save_kb():
+    kb.save()  # просто вызывает метод класса, сохраняющий data в файл
 
-def save_kb(kb: dict):
-    KB_FILE.write_text(json.dumps(kb, indent=2, ensure_ascii=False), encoding='utf-8')
-
-def analyze_error_message(error_text):
-    """Возвращает описание и решение из БЗ."""
+# --- Анализ ошибки через KB ---
+def analyze_error_message(error_text: str) -> str:
+    """Возвращает описание и решение из базы знаний."""
     info = kb.find_fix(error_text)
     if info:
         return (
-            f"Описание: {info['description']}\n"
-            f"Решение: {info['fix']}"
+            f"[KB] Описание: {info['description']}\n"
+            f"[KB] Решение: {info['fix']}"
         )
     else:
-        return "Ошибка не найдена в базе знаний."
-kb.register("ZeroDivisionError", "Деление на ноль", "Проверь значения делителя.")
+        return "[KB] Ошибка не найдена в базе знаний."
 
-# Примеры дальнейшего расширения: find_fixes_in_kb, register_error, apply_fix и т.д.
+# --- Пример регистрации новой ошибки ---
+kb.register(
+    pattern="ZeroDivisionError",
+    description="Деление на ноль",
+    fix="Проверь значения делителя."
+)
+
+# --- Дальнейшее расширение ---
+# Здесь можно добавить:
+# kb.find_fixes_in_kb(...)
+# kb.register(pattern, description, fix)
+# kb.apply_fix(...) и т.д.
+

@@ -2,28 +2,36 @@
   "root": "C:\\Users\\usuario\\GUI_Constructor",
   "py_files": [
     "main.py",
+    "core\\kb_manager.py",
     "core\\project_analyzer.py",
     "Gui\\buttons.py",
     "Gui\\fields.py",
     "Gui\\gui_constructor_v1_1.py",
     "Gui\\gui_constructor_v1_2.py",
+    "Gui\\gui_main.py",
+    "Gui\\gui_manager.py",
     "Gui\\utils.py"
   ],
   "packages": [],
   "entry_points": [
-    "Gui\\buttons.py",
     "Gui\\gui_constructor_v1_1.py",
     "Gui\\gui_constructor_v1_2.py",
+    "Gui\\gui_main.py",
     "core\\project_analyzer.py",
     "main.py"
   ],
   "dependency_graph": {
     "main.py": [],
+    "core\\kb_manager.py": [],
     "core\\project_analyzer.py": [],
     "Gui\\buttons.py": [],
     "Gui\\fields.py": [],
     "Gui\\gui_constructor_v1_1.py": [],
     "Gui\\gui_constructor_v1_2.py": [],
+    "Gui\\gui_main.py": [
+      "core\\kb_manager.py"
+    ],
+    "Gui\\gui_manager.py": [],
     "Gui\\utils.py": []
   },
   "cycles": []

@@ -25,21 +25,26 @@ import time
 from pathlib import Path
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
+from core.kb_manager import KnowledgeBase, load_kb
 
+# Пути
 ROOT = Path(__file__).resolve().parents[1]
-ANALYZER_REPORT = ROOT / 'analyzer_report.json'
 KB_FILE = ROOT / 'Gui' / 'knowledge.json'
+ANALYZER_REPORT = ROOT / 'analyzer_report.json'
 ANALYZER_SCRIPT = ROOT / 'core' / 'project_analyzer.py'
+
+# Глобальный объект KB
+kb = KnowledgeBase(kb_path=KB_FILE)
 
 class GUIManager:
     def __init__(self, root_tk):
         self.root = root_tk
         self.root.title('Jarvis GUI Constructor — Управление')
-        # системная тема - не форсируем цвета
         self.root.geometry('980x680')
         self.log_q = queue.Queue()
         self._build_ui()
         self.root.after(200, self._flush_log_q)
+
 
     def _build_ui(self):
         # Панель инструментов
@@ -233,4 +238,14 @@ try:
 except Exception:
     # Если GUI не доступен в этой среде — оставить прежнее поведение
     pass
+
+import tkinter as tk
+from gui_manager import GUIManager
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    root.title("GUI Constructor Main Window")  # заголовок окна
+    app = GUIManager(root)  # передаем root в конструктор
+    app.run()               # запуск mainloop
+
 # --- end GUI launcher ---
