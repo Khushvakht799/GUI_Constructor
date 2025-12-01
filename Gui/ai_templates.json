@@ -1,0 +1,14 @@
+{
+  "ai_assistant": {
+    "name": "AI Assistant Controller",
+    "description": "GUI для управления когнитивными ассистентами",
+    "required_dependencies": ["psutil", "threading", "queue"],
+    "default_widgets": [
+      {"type": "button", "text": "▶️ Запустить ассистента", "command": "start_assistant"},
+      {"type": "button", "text": "⏹️ Остановить ассистента", "command": "stop_assistant"},
+      {"type": "log", "height": 15},
+      {"type": "progress", "mode": "determinate"}
+    ],
+    "skill_categories": ["control", "monitoring", "training", "debugging"]
+  }
+}
