@@ -1,0 +1,106 @@
+PS C:\Users\Usuario\GUI_Constructor> python --version
+Python 3.13.9
+
+PS C:\Users\Usuario\GUI_Constructor> pip --version
+pip 25.3 from C:\Users\Usuario\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\pip (python 3.13)
+
+PS C:\Users\Usuario\GUI_Constructor> pip freeze
+blinker==1.9.0
+certifi==2025.11.12
+charset-normalizer==3.4.4
+click==8.3.1
+colorama==0.4.6
+filelock==3.19.1
+Flask==3.0.2
+Flask-Cors==4.0.0
+fsspec==2025.9.0
+huggingface-hub==0.36.0
+idna==3.11
+itsdangerous==2.2.0
+Jinja2==3.1.6
+joblib==1.5.2
+# Editable install with no version control (Juss==1.0.0)
+-e c:\users\usuario\projects\juss
+MarkupSafe==2.1.5
+mpmath==1.3.0
+networkx==3.5
+numpy==2.3.3
+packaging==25.0
+pillow==11.3.0
+PyYAML==6.0.3
+regex==2025.11.3
+requests==2.31.0
+safetensors==0.7.0
+scikit-learn==1.8.0
+scipy==1.16.3
+sentence-transformers==5.2.0
+setuptools==70.2.0
+sympy==1.14.0
+threadpoolctl==3.6.0
+tokenizers==0.22.1
+torch==2.7.1+cu118
+torchaudio==2.7.1+cu118
+torchvision==0.22.1+cu118
+tqdm==4.67.1
+transformers==4.57.3
+typing_extensions==4.15.0
+urllib3==2.6.0
+Werkzeug==3.1.4
+PS C:\Users\Usuario\GUI_Constructor>
+
+PS C:\Users\Usuario\GUI_Constructor> Get-ChildItem *.py | ForEach-Object {
+>>     Write-Host "$($_.Name): $($_.Length) bytes"
+>> }
+app.py: 3162 bytes
+fix_imports.py: 1375 bytes
+main.py: 526 bytes
+run.py: 956 bytes
+setup.py: 394 bytes
+simple_test.py: 3587 bytes
+step1_init_kb_gui.py: 1047 bytes
+test_final.py: 5178 bytes
+test_imports.py: 1796 bytes
+test_project_fixed.py: 3249 bytes
+PS C:\Users\Usuario\GUI_Constructor>
+
+C:\Users\Usuario\GUI_Constructor>for %f in (*.py) do @echo %f: & @find /c /v "" < "%f"
+app.py:
+85
+fix_imports.py:
+38
+main.py:
+19
+run.py:
+40
+setup.py:
+13
+simple_test.py:
+104
+step1_init_kb_gui.py:
+33
+test_final.py:
+138
+test_imports.py:
+52
+test_project_fixed.py:
+96
+
+C:\Users\Usuario\GUI_Constructor>
+AST OK
+
+=== Импорты из main.py ===
+import sys
+import os
+from gui import ['gui_main']
+
+C:\Users\Usuario\GUI_Constructor>type requirements.txt
+﻿# Основные зависимости
+# Tkinter обычно встроен в Python
+
+# Для возможных будущих расширений
+# pillow>=8.0.0
+# numpy>=1.19.0
+# pandas>=1.2.0
+
+C:\Users\Usuario\GUI_Constructor>
+

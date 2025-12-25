@@ -1,8 +1,5 @@
 ﻿#!/usr/bin/env python3
-"""
-Точка входа в приложение (legacy)
-Используйте app.py для нового запуска
-"""
+
 
 import sys
 import os
