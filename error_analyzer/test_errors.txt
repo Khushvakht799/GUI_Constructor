@@ -1,0 +1,31 @@
+﻿Traceback (most recent call last):
+  File "test1.py", line 3, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+
+Traceback (most recent call last):
+  File "script.py", line 10, in <module>
+    result = calculate_sum(5, "ten")
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+Traceback (most recent call last):
+  File "app.py", line 15, in <module>
+    print(undefined_variable)
+NameError: name 'undefined_variable' is not defined
+
+Traceback (most recent call last):
+  File "main.py", line 7
+    if x > 5
+            ^
+SyntaxError: invalid syntax
+
+Traceback (most recent call last):
+  File "data_processor.py", line 22, in <module>
+    value = data["missing_key"]
+KeyError: 'missing_key'
+
+Traceback (most recent call last):
+  File "utils.py", line 8, in <module>
+    def process_data(data):
+    data.process()
+AttributeError: 'list' object has no attribute 'process'
