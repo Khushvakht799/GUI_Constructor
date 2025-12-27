@@ -1,0 +1,11 @@
+2 | python_files.txt:2:C:\Users\Usuario\GUI_Constructor\fix_imports.py | Other
+3 | python_files.txt:10:C:\Users\Usuario\GUI_Constructor\test_project_fixed.py | Other
+4 | python_files.txt:36:C:\Users\Usuario\GUI_Constructor\venv\Lib\site-packages\pip\_internal\exceptions.py | Exception
+5 | python_files.txt:59:C:\Users\Usuario\GUI_Constructor\venv\Lib\site-packages\pip\_internal\commands\debug.py | Other
+6 | python_files.txt:221:C:\Users\Usuario\GUI_Constructor\venv\Lib\site-packages\pip\_vendor\msgpack\exceptions.py | Exception
+7 | python_files.txt:283:C:\Users\Usuario\GUI_Constructor\venv\Lib\site-packages\pip\_vendor\requests\exceptions.py | Exception
+8 | python_files.txt:301:C:\Users\Usuario\GUI_Constructor\venv\Lib\site-packages\pip\_vendor\resolvelib\resolvers\exception | Exception
+9 | s.py | Other
+10 | python_files.txt:320:C:\Users\Usuario\GUI_Constructor\venv\Lib\site-packages\pip\_vendor\rich\errors.py | Error
+11 | python_files.txt:357:C:\Users\Usuario\GUI_Constructor\venv\Lib\site-packages\pip\_vendor\rich\traceback.py | Traceback
+12 | python_files.txt:395:C:\Users\Usuario\GUI_Constructor\venv\Lib\site-packages\pip\_vendor\urllib3\exceptions.py | Exception

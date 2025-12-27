@@ -1,0 +1,56 @@
+
+=== Файл: C:\Users\Usuario\GUI_Constructor\src\core\gui_main.py ===
+Traceback (most recent call last):
+  File "C:\Users\Usuario\GUI_Constructor\src\core\gui_main.py", line 3, in <module>
+    from core.app_core import AppCore
+ModuleNotFoundError: No module named 'core'
+
+==================================================
+
+=== Файл: C:\Users\Usuario\GUI_Constructor\src\gui\gui_constructor_v1_2.py ===
+Traceback (most recent call last):
+  File "C:\Users\Usuario\GUI_Constructor\src\gui\gui_constructor_v1_2.py", line 12, in <module>
+    import psutil
+ModuleNotFoundError: No module named 'psutil'
+
+==================================================
+
+=== Файл: C:\Users\Usuario\GUI_Constructor\src\gui\gui_main.py ===
+Traceback (most recent call last):
+  File "C:\Users\Usuario\GUI_Constructor\src\gui\gui_main.py", line 22, in <module>
+    from core.app_core import AppCore
+ModuleNotFoundError: No module named 'core'
+
+==================================================
+
+=== Файл: C:\Users\Usuario\GUI_Constructor\src\gui\tab_manager.py ===
+  File "C:\Users\Usuario\GUI_Constructor\src\gui\tab_manager.py", line 5
+    from PyQt5.QtWidgets import (QTabWidget, QWidget, QVBoxLayout, QHBoxLayout,, QAction
+                                                                               ^
+SyntaxError: invalid syntax
+
+==================================================
+
+=== Файл: C:\Users\Usuario\GUI_Constructor\src\plugins\analysis_plugin.py ===
+Traceback (most recent call last):
+  File "C:\Users\Usuario\GUI_Constructor\src\plugins\analysis_plugin.py", line 6, in <module>
+    from core.plugin_manager import BasePlugin, PluginInfo
+ModuleNotFoundError: No module named 'core'
+
+==================================================
+
+=== Файл: C:\Users\Usuario\GUI_Constructor\src\plugins\refactor_plugin.py ===
+Traceback (most recent call last):
+  File "C:\Users\Usuario\GUI_Constructor\src\plugins\refactor_plugin.py", line 6, in <module>
+    from core.plugin_manager import BasePlugin, PluginInfo
+ModuleNotFoundError: No module named 'core'
+
+==================================================
+
+=== Файл: C:\Users\Usuario\GUI_Constructor\src\utils\__init__.py ===
+Traceback (most recent call last):
+  File "C:\Users\Usuario\GUI_Constructor\src\utils\__init__.py", line 5, in <module>
+    from .utils import *
+ImportError: attempted relative import with no known parent package
+
+==================================================

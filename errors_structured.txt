@@ -1,0 +1,7 @@
+1 | C:\Users\Usuario\GUI_Constructor\src\core\gui_main.py === | ModuleNotFoundError | No module named 'core'
+2 | C:\Users\Usuario\GUI_Constructor\src\gui\gui_constructor_v1_2.py === | ModuleNotFoundError | No module named 'psutil'
+3 | C:\Users\Usuario\GUI_Constructor\src\gui\gui_main.py === | ModuleNotFoundError | No module named 'core'
+4 | C:\Users\Usuario\GUI_Constructor\src\gui\tab_manager.py === | SyntaxError | invalid syntax
+5 | C:\Users\Usuario\GUI_Constructor\src\plugins\analysis_plugin.py === | ModuleNotFoundError | No module named 'core'
+6 | C:\Users\Usuario\GUI_Constructor\src\plugins\refactor_plugin.py === | ModuleNotFoundError | No module named 'core'
+7 | C:\Users\Usuario\GUI_Constructor\src\utils\__init__.py === | ImportError | attempted relative import with no known parent package
