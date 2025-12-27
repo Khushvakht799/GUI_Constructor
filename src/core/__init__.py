@@ -1,11 +1,6 @@
 ﻿"""
-Основные модули ядра приложения
+Core module for GUI Constructor.
+Contains central application logic, command system, and plugin management.
 """
 
-from .kb_manager import KnowledgeBase
-from .project_analyzer import ProjectAnalyzer
-
-__all__ = [
-    'KnowledgeBase',
-    'ProjectAnalyzer',
-]
+# This file makes the core directory a Python package
