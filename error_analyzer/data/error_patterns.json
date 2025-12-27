@@ -1,0 +1,13 @@
+﻿{
+  "patterns": [],
+  "statistics": {
+    "total_errors": 0,
+    "last_updated": null,
+    "pattern_counts": {}
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "description": "База данных паттернов ошибок Python",
+    "created_date": ""
+  }
+}
